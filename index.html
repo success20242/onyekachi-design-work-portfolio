@@ -3,27 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Onyekachi Design Work Portfolio</title>
+  <title>Onyekachi Ebosi — Design Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     body { margin: 0; font-family: 'Poppins', sans-serif; background: #0d0d0d; color: #fff; }
-    header { text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #1d1d1d, #3a2e20); }
-    header h1 { font-size: 3rem; margin-bottom: 10px; font-weight: 700; }
-    header p { font-size: 1.2rem; opacity: 0.8; }
-    .section-title { text-align: center; font-size: 2rem; margin: 50px 0 20px; font-weight: 600; }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; padding: 0 20px 50px; }
-    .gallery img { width: 100%; border-radius: 10px; background: #222; object-fit: cover; height: 320px; }
-    .about { max-width: 900px; margin: 40px auto; padding: 20px; line-height: 1.7; font-size: 1.1rem; opacity: 0.9; }
-    footer { text-align: center; padding: 40px; margin-top: 40px; background: #111; color: #aaa; font-size: 0.9rem; }
+    header { text-align: center; padding: 90px 20px; background: linear-gradient(135deg, #1a1a1a, #352a1a); }
+    header h1 { font-size: 3.3rem; margin-bottom: 10px; font-weight: 700; }
+    header p { font-size: 1.25rem; opacity: 0.85; max-width: 700px; margin: 10px auto 0; }
+
+    .btn-container { margin-top: 30px; }
+    .btn { background: #c59d5f; padding: 12px 28px; border-radius: 30px; color: #000; font-weight: 600; text-decoration: none; transition: 0.3s; }
+    .btn:hover { background: #e2b97d; }
+
+    .section-title { text-align: center; font-size: 2.2rem; margin: 60px 0 25px; font-weight: 600; }
+
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; padding: 0 20px 50px; }
+    .gallery img { width: 100%; border-radius: 12px; background: #222; object-fit: cover; height: 330px; transition: 0.3s; }
+    .gallery img:hover { transform: scale(1.03); }
+
+    .about, .process, .contact { max-width: 900px; margin: 40px auto; padding: 0 20px; line-height: 1.75; font-size: 1.1rem; opacity: 0.93; }
+
+    .process-list { margin-top: 20px; padding-left: 20px; }
+    .process-list li { margin-bottom: 10px; }
+
+    footer { text-align: center; padding: 40px; margin-top: 50px; background: #111; color: #aaa; font-size: 0.9rem; }
+      body, header, footer, .gallery img { transition: all 0.4s ease-in-out; }
+    .gallery img:hover { transform: scale(1.05); box-shadow: 0 0 18px #c59d5f; }
+  </style>
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('light');
+    }
+  </script>
+  <style>
+    body.light { background: #f5f5f5; color: #111; }
+    body.light header { background: linear-gradient(135deg, #fff, #ddd); }
+    body.light footer { background: #e5e5e5; color: #444; }
+    .mode-btn { position: fixed; top: 20px; right: 20px; background: #c59d5f; border: none; padding: 10px 16px; border-radius: 20px; cursor: pointer; font-weight: 600; }
+    body.light .mode-btn { background: #444; color: #fff; }
   </style>
 </head>
 <body>
+  <button class="mode-btn" onclick="toggleMode()">Toggle Light/Dark</button>
   <header>
-    <h1>Onyekachi Ebosi — Art Portfolio</h1>
-    <p>AI Art • Cultural Heritage • Fantasy • Portraits • Visual Storytelling</p>
+    <h1>Onyekachi Ebosi — Art & AI Design Portfolio</h1>
+    <p>A multidisciplinary creator blending African culture, symbolism, futurism, and emotional storytelling — brought to life through advanced AI design techniques.</p>
+    <div class="btn-container">
+      <a href="#portfolio" class="btn">View My Work</a>
+    </div>
   </header>
 
-  <h2 class="section-title">Featured Works</h2>
+  <h2 id="portfolio" class="section-title">Featured Works</h2>
   <div class="gallery">
     <img src="https://i.imgur.com/ktiPeNh.jpeg" alt="Featured Art 1">
     <img src="https://i.imgur.com/UHSYdQO.jpeg" alt="Featured Art 2">
@@ -39,11 +69,46 @@
 
   <h2 class="section-title">About the Artist</h2>
   <div class="about">
-    <p>Onyekachi Ebosi is a multidisciplinary digital creator focused on transforming culture, nature, and human emotion into compelling visual art. His work blends African heritage, symbolism, futuristic interpretation, and storytelling — producing pieces that educate, inspire, and connect deeply with diverse audiences.</p>
+    <p>Onyekachi Ebosi is a digital storyteller whose creations merge cultural roots, futuristic concepts, and deep emotional narratives. His visual style highlights African identity, symbolism, nature, and imaginative reinterpretations of traditional elements — producing artwork that educates, sparks curiosity, and inspires audiences globally.</p>
+    <p>Driven by creativity and innovation, he uses cutting-edge AI tools to craft high-quality visuals suitable for editorial design, world-building, character creation, and immersive storytelling experiences.</p>
+  </div>
+
+  <h2 class="section-title">My Creative Process</h2>
+  <div class="process">
+    <p>Each artwork is crafted with a blend of research, cultural insight, and AI-driven iteration. My process includes:</p>
+    <ul class="process-list">
+      <li><strong>Concept Development:</strong> Identifying themes rooted in culture, fantasy, heritage, or emotion.</li>
+      <li><strong>Prompt Engineering:</strong> Crafting detailed AI prompts to achieve high-quality, stylistically consistent visuals.</li>
+      <li><strong>Iteration & Refinement:</strong> Enhancing lighting, textures, mood, and storytelling elements.</li>
+      <li><strong>Final Styling:</strong> Color-grading, retouching, and preparing images for display or professional use.</li>
+    </ul>
+  </div>
+
+  <h2 class="section-title">Contact & Social Links</h2>
+  <div class="contact">
+    <p>If you would like to collaborate, request custom visuals, or review additional work, feel free to reach out:</p>
+    <p><strong>Email:</strong> onyekachiebosi@gmail.com</p>
+    <p><strong>Instagram:</strong> instagram.com/onyekachijoelebosi</p>
+    <p><strong>Facebook:</strong> facebook.com/OnyekachiEbosiOfficial</p>
+    <p><strong>TikTok:</strong> tiktok.com/@amy4real23</p>
+  </div>
+
+    <h2 class="section-title">AI Tools Used</h2>
+  <div class="about">
+    <p>I create my visuals using advanced AI tools that enhance creativity, detail, and storytelling impact, including:</p>
+    <ul>
+      <li><strong>Playground AI</strong> – high‑quality rendering & design</li>
+      <li><strong>Midjourney</strong> – artistic concepts & character creation</li>
+      <li><strong>Leonardo AI</strong> – stylistic variation & enhancement</li>
+      <li><strong>Photoshop / Lightroom</strong> – final retouch & color grading</li>
+    </ul>
+    <p>You can also download my full PDF portfolio below:</p>
+    <a href="portfolio.pdf" download class="btn" style="display:inline-block;margin-top:15px;">Download PDF Portfolio</a>
   </div>
 
   <footer>
     © 2025 Onyekachi Ebosi — All Rights Reserved
   </footer>
+
 </body>
 </html>
